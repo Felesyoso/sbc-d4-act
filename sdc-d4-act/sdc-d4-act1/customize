@@ -1,0 +1,20 @@
+from random import randint
+
+choices = ["kulob", "hayang"]
+
+while True:
+    p1 = int(input("Enter a Choice (0 for kulob, 1 for hayang):"))
+    c2 = randint(0, 1)
+    c3 = randint(0, 1)
+
+    p1choice = choices[p1]
+    c2choice = choices[c2]
+    c3choice = choices[c3]
+
+    if (p1choice == "kulob" and c2choice == "hayang" and c3choice == "hayang") or \
+       (p1choice == "hayang" and c2choice == "hayang" and c3choice == "kulob"):
+        print(p1choice, c2choice, c3choice, "c3 wins")
+    elif (p1choice == "kulob" and c2choice == "hayang"):
+        print("PLAYER - 1", p1choice, "c - 2", c2choice, "c3", c3choice, "P1 wins")
+    else:
+        print("PLAYER - 1", p1choice, "c - 2", c2choice, "c3", c3choice, "draw")
